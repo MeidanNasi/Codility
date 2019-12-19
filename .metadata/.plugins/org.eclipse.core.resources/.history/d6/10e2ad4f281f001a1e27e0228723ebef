@@ -1,0 +1,11 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+
+		Factors f = new Factors();
+		System.out.println(f.solution(24));
+
+	}
+
+}

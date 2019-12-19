@@ -1,0 +1,12 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		String s = "{[()()]}";
+		Brackets b = new Brackets();
+		int res = b.solution(s);
+		System.out.println(res);
+
+	}
+
+}

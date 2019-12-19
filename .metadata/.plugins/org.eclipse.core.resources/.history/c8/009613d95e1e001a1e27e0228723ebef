@@ -1,0 +1,24 @@
+import java.util.LinkedList;
+import java.util.Stack;
+
+public class Brackets {
+	public int solution(String S) {
+		
+		if(S.isEmpty()) return 1;
+		
+		Stack<Character> s= new Stack<>();
+		LinkedList<Character> queue = new LinkedList<>();
+		
+		for(int i=0; i<S.length(); i++) {
+			s.add(S.charAt(i));
+			queue.addFirst(S.charAt(i));
+		}
+		
+		for(int i=0; i<S.length(); i++) {
+			if(s.pop() != queue.pollLast()) return 0;
+		}
+		
+		
+		return 1;
+	}
+}

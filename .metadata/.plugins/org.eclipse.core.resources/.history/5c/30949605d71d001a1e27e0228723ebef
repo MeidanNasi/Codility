@@ -1,0 +1,14 @@
+package lesson_5_prefixSums;
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		PassingCars p = new PassingCars();
+		
+		int[] arr = {0,1,0,1,1};
+		
+		System.out.println(p.solution(arr));
+
+	}
+
+}

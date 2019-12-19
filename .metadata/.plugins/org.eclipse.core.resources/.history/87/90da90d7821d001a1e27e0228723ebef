@@ -1,0 +1,10 @@
+package lesson_4_couting_elements;
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

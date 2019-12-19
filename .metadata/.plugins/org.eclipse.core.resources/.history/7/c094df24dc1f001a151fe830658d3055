@@ -1,0 +1,14 @@
+package lesson_12_euclidean;
+
+public class ChocolatesByNumbers {
+	int counter = 0;
+	public int solution(int N, int M) {
+		
+			int left = 0;
+			while( (left+M)%N !=0 ) {
+				counter++;
+				left += (left+M)%N;
+			}
+		return counter;
+	}
+}

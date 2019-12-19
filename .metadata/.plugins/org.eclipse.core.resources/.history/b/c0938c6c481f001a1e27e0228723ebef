@@ -1,0 +1,14 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+
+		Factors f = new Factors();
+		System.out.println(f.solution(7));
+		
+		MinPerimeterRectangle m = new MinPerimeterRectangle();
+		int res = m.solution(30);
+		System.out.println(res);
+	}
+
+}

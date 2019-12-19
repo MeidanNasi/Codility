@@ -1,0 +1,28 @@
+package lesson_4_couting_elements;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
+public class PermCheck {
+	    public int solution(int[] A) {
+	    	
+	    	int len = A.length;
+	    	boolean flag = false;
+	    	ArrayList<Integer> list = new ArrayList<>();
+	    	
+	    	for(int i=1; i<len; i++) {
+	    		list.add(A[i]);
+	    	}
+	    	
+	    	for(int i=0; i<len; i++) {
+	    		if(!list.contains(i)) {
+	    			flag = true;
+	    		}
+	    	}
+	    	
+	    	if(flag == true) return 0;
+	    	else return 1;
+	    	
+	    }
+}

@@ -1,0 +1,19 @@
+package lesson_2;
+
+import java.util.HashMap;
+
+class Solution {
+    public int solution(int[] A) {
+    	int res = 0;
+    	HashMap<Boolean, Integer> mapper = new HashMap<>();
+        for(int i =0; i<A.length; i++) {
+        	for(int j=i+1; j<A.length; j++) {
+        		if(A[i] == A[j]) {
+        			mapper.put(true, A[i]);
+        		}
+        	}
+        }
+        res = mapper.get(false);
+        return res;
+    }
+}

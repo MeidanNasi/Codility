@@ -1,0 +1,10 @@
+package lesson_3_time_comlexity;
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

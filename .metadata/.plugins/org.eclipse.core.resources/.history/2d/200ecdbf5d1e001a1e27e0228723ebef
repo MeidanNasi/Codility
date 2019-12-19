@@ -1,0 +1,13 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		String should_return_1 = "{[()()]}";
+		String should_return_2 = "([)()]"; 
+		Brackets b = new Brackets();
+		int res = b.solution(should_return_2);
+		System.out.println(res);
+
+	}
+
+}

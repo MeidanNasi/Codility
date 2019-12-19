@@ -1,0 +1,15 @@
+package lesson_3_time_comlexity;
+
+public class FrogJmp {
+	
+	public int solution(int X, int Y, int D) {
+		
+		int i;
+		int sum=X;
+		
+		for(i=0; Y < sum; i++) {
+			sum+=D;
+		}
+		return i+1;
+	}
+}

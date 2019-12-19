@@ -1,0 +1,35 @@
+package lesson_8_leaders;
+
+public class Dominator {
+	public int solution(int[] A) {
+		
+		
+		int value = 0;
+		int size = 0;
+		int saver = 0;
+		int counter =0;
+		
+		for(int i=0; i<A.length; i++) {
+			if(size == 0) {
+				size++;
+				value = A[i];
+			}
+			else {
+				if(value != A[i]) size--;
+				else size++;
+			}			
+		}
+		int candidate = -1;
+		
+		for(int i=0; i<A.length; i++) {
+			if(A[i] == value) { 
+			counter++;
+			saver = i;
+			}
+		}
+		if(counter > A.length/2) {
+			candidate = value;
+		}
+		return -1;
+	}
+}

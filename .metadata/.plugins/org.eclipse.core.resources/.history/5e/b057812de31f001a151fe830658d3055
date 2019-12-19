@@ -1,0 +1,50 @@
+package lesson_12_euclidean;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class CommonPrimeDivisors {
+	public int solution(int[] A, int[] B) {
+
+		int gcds[] = new int[A.length];
+		for(int i=0; i<A.length; i++) {
+			
+		}
+		
+		
+		
+		return 0;
+	}
+	
+	// help functions
+	public int[] primesUntilN(int N) {
+		boolean[] sieve = new boolean[N+1];
+		Arrays.fill(sieve, Boolean.TRUE);
+		sieve[0] = false;
+		sieve[1] = false;
+		for(int i=2; i<(int)(Math.sqrt(N)+1); i++) {
+			if(sieve[i]) {
+				for(int j=i+i; j<N; j+=i) {
+					sieve[j] = false;
+				}
+			}
+		}
+		ArrayList<Integer> primes = new ArrayList<Integer>();
+		for(int i=0; i<sieve.length-1; i++) {
+			if(sieve[i]) {
+				primes.add(i);
+			}
+		}
+		int res[] = primes.stream().mapToInt(i->i).toArray();
+		return  res;
+	}
+	
+	public int gcd(int N, int M) {
+		if (N % M == 0) {
+			return M;
+		} else {
+			return gcd(M, N % M);
+		}
+	}
+	
+}

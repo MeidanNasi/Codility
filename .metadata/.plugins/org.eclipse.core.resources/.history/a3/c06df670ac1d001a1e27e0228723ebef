@@ -1,0 +1,18 @@
+package lesson_4_couting_elements;
+
+import java.util.HashMap;
+
+public class MissingInteger {
+
+	public int solution(int[] A) {
+		HashMap<Boolean,Integer> map = new HashMap<>();
+		for(int a : A) {
+			if(map.containsKey(a+1)) {
+				map.put(true, a);
+			}else map.put(false, a);
+		}
+		Integer res = map.get(false);
+		return res;
+		
+	}
+}

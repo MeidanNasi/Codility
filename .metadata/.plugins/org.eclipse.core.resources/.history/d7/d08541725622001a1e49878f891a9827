@@ -1,0 +1,31 @@
+
+public class inserting {
+
+	int solution(int N) {
+
+		boolean flag = false;
+		int len = 0;
+		int newVal = 0;
+		int tmp = N;
+		while (tmp != 0) {
+			tmp = tmp/10;
+			len++;
+		}
+		
+		if( N == 0) {
+			newVal = 5*10;
+		}
+		
+		while (!flag) {
+			if (N > 0) {
+				if (N % (10^len-1) < 5) {
+					newVal = (10 ^ len)*5 + N;
+					flag = true;
+				} else
+					len--;
+			}
+		}
+
+		return newVal;
+	}
+}

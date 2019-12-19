@@ -1,0 +1,42 @@
+package lesson_5_prefixSums;
+
+import java.util.ArrayList;
+
+public class GenomicRangeQuery {
+	public int[] solution(String S, int[] P, int[] Q) {
+		
+		ArrayList<Integer> orglist = new ArrayList<>();
+		ArrayList<Integer> reslist = new ArrayList<>();
+		
+		for(int i=0; i<S.length(); i++) {
+			if(S.charAt(i) == 'A') {
+				orglist.add(1);
+			}
+			if(S.charAt(i) == 'C') {
+				orglist.add(2);
+			}
+			if(S.charAt(i) == 'G') {
+				orglist.add(3);
+			}
+			if(S.charAt(i) == 'T') {
+				orglist.add(4);
+			}
+		}
+		
+		for(int i=0; i<P.length; i++) {
+			int len = Q[i]-P[i];
+			int min =Integer.MAX_VALUE;
+			for(int j=0; j<len; j++) {
+				if(orglist.get(j) < min) min = orglist.get(j);
+			}
+			reslist.add(min);
+		}
+		
+		int[] res = reslist.stream().mapToInt(i -> i).toArray();
+		
+		
+		return res;
+	}
+}
+
+

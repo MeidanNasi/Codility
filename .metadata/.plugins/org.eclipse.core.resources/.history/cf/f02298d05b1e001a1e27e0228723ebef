@@ -1,0 +1,27 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		Queue myQueue = new Queue(5);
+		
+		
+		
+		// { 5,6,3,9,1 }
+		myQueue.enquque(5);
+		myQueue.enquque(6);
+		myQueue.enquque(3);
+		myQueue.enquque(9);
+		myQueue.enquque(1);
+		
+		System.out.println(myQueue.isFull()); // true
+		System.out.println(myQueue.isEmpty()); // false
+		
+		System.out.println("Order of costumers is: ");
+		for(int i=0; i<myQueue.size(); i++) {
+			System.out.println(i+" -> "+myQueue.dequque());
+		}
+		
+		System.out.println(myQueue.isEmpty()); // true
+	}
+
+}

@@ -1,0 +1,13 @@
+package lesson_16_greedyAlgorithms;
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		Ropes r = new Ropes();
+		int A[] = {1,2,5};
+		int res = r.solution(4, A);
+		System.out.println(res);
+
+	}
+
+}

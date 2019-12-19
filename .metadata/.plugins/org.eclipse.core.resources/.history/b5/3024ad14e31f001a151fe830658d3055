@@ -1,0 +1,11 @@
+package lesson_12_euclidean;
+
+public class GCDcalculation {
+	public int gcd(int N, int M) {
+		if (N % M == 0) {
+			return M;
+		} else {
+			return gcd(M, N % M);
+		}
+	}
+}

@@ -1,0 +1,16 @@
+package lesson_4_couting_elements;
+
+public class PermCheck {
+	    public int solution(int[] A) {
+	        
+	    	Integer[] counter;
+	    	
+	    	for(int a : A) {
+	    		
+	    	}
+	    	
+	    	
+	    	
+	    	return 0;
+	    }
+}

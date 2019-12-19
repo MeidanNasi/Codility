@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class Fish {
+	
+	public int solution(int[] A, int[] B) {
+		
+		int counter = 0;
+		ArrayList<Integer> stack = new ArrayList<>();
+		
+		
+		for(int i=0; i<A.length; i++) {
+			if(B[i] == 1) {
+				stack.add(A[i]);
+			}
+			else if(stack.isEmpty()) counter++;
+			else if(A[i] < stack.get(stack.size()-1)) {
+				continue;
+			}
+			else {
+				counter++;
+				while(A[i] > stack.get(stack.size()-1)) {
+				stack.remove(stack.size()-1);
+			}
+			}
+		}
+		return stack.size()+counter;
+	}
+}

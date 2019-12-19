@@ -1,0 +1,19 @@
+
+public class inserting {
+
+	int solution(int N) {
+
+		Integer num = N;
+		String s = num.toString();
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<s.length(); i++) {
+			if(s.charAt(i) < '5') {
+				sb.append('5');
+				sb.append(s.substring(i+1, s.length()-1));
+				
+			}
+			else sb.append(s.charAt(i));
+		}
+		return Integer.parseInt(sb.toString());
+	}
+}

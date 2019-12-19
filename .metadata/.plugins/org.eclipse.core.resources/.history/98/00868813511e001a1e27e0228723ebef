@@ -1,0 +1,14 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		Stack myStack = new Stack(3);
+		
+		myStack.push(5); // 5 at the bottom
+		myStack.push(10);
+		myStack.push(3); // 3 on top
+
+		System.out.println(myStack.peek());
+	}
+
+}

@@ -1,0 +1,22 @@
+INDEX VERSION 1.131+C:\Users\Meidan Nasi\Desktop\codility_workspace\.metadata\.plugins\org.eclipse.jdt.core
+4290699868.index
+3946093975.index
+1314753643.index
+439419366.index
+1896362536.index
+4142939117.index
+788625341.index
+1947908364.index
+167559545.index
+2015122752.index
+2241805318.index
+114674030.index
+118251289.index
+1385223636.index
+3164517624.index
+2727674821.index
+3654895315.index
+824238515.index
+3415835758.index
+3841990633.index
+1834443931.index

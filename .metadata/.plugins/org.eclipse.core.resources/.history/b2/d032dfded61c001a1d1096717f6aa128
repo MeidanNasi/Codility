@@ -1,0 +1,13 @@
+package lesson_3_time_comlexity;
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		
+		FrogJmp f = new FrogJmp();
+		int res = f.solution(10, 85, 30);
+		System.out.println(res);
+
+	}
+
+}

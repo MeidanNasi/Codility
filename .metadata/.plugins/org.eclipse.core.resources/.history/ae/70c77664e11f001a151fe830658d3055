@@ -1,0 +1,14 @@
+package lesson_12_euclidean;
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		ChocolatesByNumbers c = new ChocolatesByNumbers();
+		System.out.println(c.solution(10, 25));
+		
+		GCDcalculation gcd = new GCDcalculation();
+		System.out.println(gcd.gcd(75, 15));
+
+	}
+
+}

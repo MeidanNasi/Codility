@@ -1,0 +1,13 @@
+
+public class mainTrain {
+
+	public static void main(String[] args) {
+		
+		String s = "The";
+		Solution sol = new Solution();
+		
+		String res = sol.solution(s, 2);
+		System.out.println(res);
+	}
+
+}

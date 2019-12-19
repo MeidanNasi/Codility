@@ -1,0 +1,30 @@
+package lesson_3_time_comlexity;
+
+public class TapeEquilibrium {
+	public int solution(int[] A) {
+		
+		int sum=0;
+		int disired = 0;
+		int tmp = 0;
+		int j;
+		int lefties = 0;
+		
+		for(int i=0; i<A.length; i++) {
+			sum += A[i];
+		}
+		
+		if(sum % 2 == 0) disired = sum/2;
+		else disired = (sum/2)+1;
+		
+		for(j=0; tmp<disired; j++ ) {
+			tmp += A[j];
+		}
+		for(int i=j; i<A.length; i++) {
+			lefties += A[i];
+		}
+		
+		
+		
+		return Math.abs(tmp-lefties);
+	}
+}

@@ -1,0 +1,46 @@
+
+public class Queue {
+
+	// queue's data members
+	private int[] arr;
+	private int capacity;
+	private	int head;
+	
+	public Queue(int wished_capacity) {
+	
+		arr = new int[wished_capacity];
+		capacity = wished_capacity;
+		head=-1;
+		count=0;
+	}
+	
+	public void enquque(int x) {
+		if(isFull()) {
+			System.out.println("queue is full..");
+		}
+		else {
+			arr[0] = x;
+			head++;
+		}
+	}
+	
+	public int dequque() {
+		if(isEmpty()) {
+			System.out.println("queue is empty");
+			return -1;
+		}
+		else
+			return arr[head--]; // return arr[head] and then decreasing head by 1
+	}
+	
+	public boolean isFull() {
+		return (head == capacity-1);
+	}
+	public boolean isEmpty() {
+		return (head == -1);
+	}
+	public int size() {
+		return head;
+	}
+
+}

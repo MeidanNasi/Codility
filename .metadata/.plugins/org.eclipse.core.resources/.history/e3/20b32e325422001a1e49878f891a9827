@@ -1,0 +1,9 @@
+
+public class inserting {
+	
+	int solution(int N) {
+		Integer number = N;
+		int len = number.SIZE;
+		return len;
+	}
+}

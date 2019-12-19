@@ -1,0 +1,64 @@
+package lesson_12_euclidean;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class CommonPrimeDivisors {
+	public int solution(int[] A, int[] B) {
+
+		int gcds[] = new int[A.length];
+		int counter = 0;
+		ArrayList<int[]> list = new ArrayList<>();
+		int result = 0;
+		
+		for(int i=0; i<A.length; i++) {
+			gcds[i] = gcd(A[i], B[i]);
+		}
+		for(int i=0; i<A.length; i++) {
+			list.add(primesUntilN(gcds[i]));
+		}
+		for(int i=0; i<A.length; i++) {
+			int counterAs = 0;
+			int counterBs = 0;
+			for(int j=0; j<list.get(i).length; j++) {
+				if(A[i] % list.get(i)[j] == 0) counterAs ++;
+				if(B[i] % list.get(i)[j] == 0) counterBs ++;
+			}
+			if(counterAs == counterBs && counterAs !=1 && counterBs !=1) result++;
+		}
+		
+		return result;
+	}
+	
+	// help functions
+	public int[] primesUntilN(int N) {
+		boolean[] sieve = new boolean[N+1];
+		Arrays.fill(sieve, Boolean.TRUE);
+		sieve[0] = false;
+		sieve[1] = false;
+		for(int i=2; i<(int)(Math.sqrt(N)+1); i++) {
+			if(sieve[i]) {
+				for(int j=i+i; j<N; j+=i) {
+					sieve[j] = false;
+				}
+			}
+		}
+		ArrayList<Integer> primes = new ArrayList<Integer>();
+		for(int i=0; i<sieve.length-1; i++) {
+			if(sieve[i]) {
+				primes.add(i);
+			}
+		}
+		int res[] = primes.stream().mapToInt(i->i).toArray();
+		return  res;
+	}
+	
+	public int gcd(int N, int M) {
+		if (N % M == 0) {
+			return M;
+		} else {
+			return gcd(M, N % M);
+		}
+	}
+	
+}

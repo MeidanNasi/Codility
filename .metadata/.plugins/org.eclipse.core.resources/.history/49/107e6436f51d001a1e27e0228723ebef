@@ -1,0 +1,14 @@
+package lesson_5_prefixSums;
+
+public class CountDiv {
+
+	
+	public int solution(int A, int B, int K) {
+		int counter = 0;
+		for(int i=A; i<B+1; i++) {
+			if(i%K == 0) counter++;
+		}
+		return counter;
+	}
+
+}

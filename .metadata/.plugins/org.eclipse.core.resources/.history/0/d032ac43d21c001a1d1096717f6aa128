@@ -1,0 +1,10 @@
+package lesson_3;
+
+public class mainTrain {
+
+	 int[] A = {3, 8, 9, 7, 6};
+	 int K = 3;
+	 
+	 Solution s = new Solution();
+	 
+}
